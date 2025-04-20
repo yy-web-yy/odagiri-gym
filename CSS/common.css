@@ -185,11 +185,25 @@ ul {
   /* ハンバーガー位置：右上に固定 */
   .hamburger {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
     position: absolute;
     right: 10px;
-    top: 50%; /* ← 上から50%の位置に */
-    transform: translateY(-50%); /* ← 自分の高さの半分だけ上に引き上げて中央寄せ */
+    top: 50%;
+    transform: translateY(-50%);
     z-index: 1001;
+  }
+
+  .hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 4px 0;
+    background-color: #0055cc;
+    transition: 0.3s;
   }
 
   /* メニュー表示：ハンバーガーに近い位置に */

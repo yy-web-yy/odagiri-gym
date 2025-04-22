@@ -94,57 +94,6 @@
     <i class="fas fa-arrow-up"></i>
   </a>
 
-  <script>
-    // 例：スクロールでクラス追加
-    window.addEventListener('scroll', function () {
-      const header = document.querySelector('.header');
-      const trigger = document.querySelector('#trigger');
-      const triggerTop = trigger.getBoundingClientRect().top;
-
-      if (triggerTop <= 0) {
-        header.classList.add('scrolled');
-      } else {
-        header.classList.remove('scrolled');
-      }
-    });
-
-    document.addEventListener('DOMContentLoaded', () => {
-      const header = document.getElementById('header');
-      const trigger = document.getElementById('trigger');
-
-      const observer = new IntersectionObserver(
-        ([entry]) => {
-          if (entry.isIntersecting) {
-            header.classList.remove('scrolled');
-          } else {
-            header.classList.add('scrolled');
-          }
-        },
-        { threshold: 0 }
-      );
-
-      observer.observe(trigger);
-    });
-
-    document.addEventListener('DOMContentLoaded', () => {
-      const backToTop = document.getElementById('back-to-top');
-
-      window.addEventListener('scroll', () => {
-        if (window.scrollY > 300) {
-          backToTop.style.display = 'block';
-        } else {
-          backToTop.style.display = 'none';
-        }
-      });
-
-      backToTop.addEventListener('click', (e) => {
-        e.preventDefault();
-        window.scrollTo({
-          top: 0,
-          behavior: 'smooth'
-        });
-      });
-    });
-  </script>
+  <script src="js/main.js" defer></script>
 </body>
 </html>

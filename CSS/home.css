@@ -1,0 +1,362 @@
+
+/* ------------------ 見出し ------------------ */
+.section__heading {
+  color: #000;
+  font-weight: bold;
+  position: relative;
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+  text-align: left;
+  padding-bottom: 1rem;
+}
+
+.section__heading::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: #cc0000;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.section--news {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  color: #222;
+}
+
+.section--news .section__title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: var(--main-color);
+  text-align: center;
+  position: relative;
+  padding: 0.5rem 0;
+  margin-bottom: 1.5rem;
+}
+
+.section--news .section__title::before,
+.section--news .section__title::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: var(--accent-color);
+  position: absolute;
+  left: 0;
+}
+
+.section--news .section__title::before {
+  top: 0;
+}
+
+.section--news .section__title::after {
+  bottom: 0;
+}
+/* ------------------ 見出し ここまで------------------ */
+
+/* ------------------ ヒーローセクション ------------------ */
+.hero {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 768px) {
+  .hero {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .hero picture {
+    display: block;
+  }
+  
+  .hero-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+  }
+}
+
+.intro {
+  background-color: #e6f4ff;
+  padding: 2rem 0;
+  margin: 0; 
+}
+
+.intro-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  text-align: center;
+
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 1s ease-out forwards;
+  animation-delay: 0.2s;
+}
+
+.intro__title {
+  color: #cc0000;
+  font-size: 2.2rem;
+  font-weight: bold;
+  letter-spacing: 1.2px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.intro p {
+  font-size: 1.2rem;
+  color: #333;
+  margin-top: 0.5rem;
+  line-height: 1.6;
+}
+
+@media screen and (max-width: 768px) {
+  .intro__title {
+    font-size: 1.8rem;
+  }
+
+  .intro p {
+    font-size: 1rem;
+  }
+}
+/* ------------------ ヒーローセクション ここまで ------------------ */
+
+/* ------------------ ニュース一覧 ------------------ */
+.news-list {
+  margin-top: 1rem;
+  padding-left: 0;
+}
+
+.news-list__item {
+  display: flex;
+  align-items: baseline;
+  font-size: 1.1rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.news-list__item:last-child {
+  border-bottom: none;
+}
+
+.news-list__date {
+  font-weight: bold;
+  margin-right: 0.5rem;
+  white-space: nowrap;
+}
+/* ------------------ ニュース一覧 ここまで ------------------ */
+
+/* ------------------ コンセプト・マンツーマン指導・価格設定セクション ------------------ */
+.main section {
+  margin-bottom: 3rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.content1 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+}
+
+.content1 img {
+  width: 400px;
+  max-width: 100%;
+  border-radius: 12px;
+}
+
+.content1 div {
+  flex: 1;
+}
+
+.reverse-layout .feature-content {
+  flex-direction: row-reverse;
+}
+
+@media screen and (max-width: 768px) {
+  .feature-content {
+    flex-direction: column !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .content1 {
+    flex-direction: column;
+  }
+
+  .content1 img {
+    width: 100%;
+    height: auto;
+  }
+}
+/* ------------------ コンセプト・マンツーマン指導・価格設定セクション ここまで ------------------ */
+
+/* ------------------ 店舗外観セクション ------------------ */
+.section2 {
+  background-color: #f0f8ff;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.section2 h2 {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin: 0.5rem 0 1.5rem;
+  color: #000;
+  text-align: center;
+  position: relative;
+  padding: 0.5rem 0;
+}
+
+.section2 h2::after {
+  content: "";
+  position: absolute;
+  display: block;
+  left: 0;
+  bottom: -10px;
+  width: 100%;
+  height: 2px;
+  background-color: var(--accent-color);
+}
+
+.shop-images {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+.shop-images img {
+  width: 45%;
+  max-width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  object-fit: cover;
+}
+
+.btn-wrapper {
+  margin-top: 10px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 36px;
+  background: #fff;
+  color: #007BFF;
+  border: 2px solid #007BFF;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: #007BFF;
+  color: #fff;
+}
+/* ------------------ 店舗外観セクション ここまで ------------------ */
+
+/* ------------------ レンタルジム ------------------ */
+.rental-gym-banner {
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.rental-gym-img {
+  max-width: 600px;
+  width: 90%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+}
+
+.rental-gym-img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+/* ------------------ レンタルジム ここまで ------------------ */
+
+/* ------------------ アクセス ------------------ */
+.access-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.access-content .map {
+  flex: 1 1 50%;
+  min-width: 300px;
+  display: flex;
+}
+
+.access-content .map iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+@media screen and (max-width: 768px) {
+  .access-content {
+    flex-direction: column;
+  }
+  .access-content .map,
+  .access-content .shop-info {
+    width: 100%;
+    height: auto;
+  }
+  .access-content .map iframe {
+    height: 300px;
+  }
+}
+
+.shop-info {
+  flex: 1 1 45%;
+  min-width: 260px;
+  text-align: left;
+}
+
+.shop-info dl {
+  margin: 0;
+}
+
+.shop-info dt {
+  font-weight: bold;
+  margin-top: 1em;
+  color: #333;
+}
+
+.shop-info dd {
+  margin-left: 0;
+  margin-bottom: 0.5em;
+  line-height: 1.5;
+  color: #555;
+}
+
+.shop-info .note {
+  font-size: 0.9em;
+  color: #888;
+}
+/* ------------------ アクセス ここまで ------------------ */

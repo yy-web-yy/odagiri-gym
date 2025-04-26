@@ -1,26 +1,5 @@
 
 /* ------------------ 見出し ------------------ */
-.section__heading {
-  color: #000;
-  font-weight: bold;
-  position: relative;
-  font-size: 1.4rem;
-  margin-bottom: 2rem;
-  text-align: left;
-  padding-bottom: 1rem;
-}
-
-.section__heading::after {
-  content: "";
-  display: block;
-  height: 2px;
-  width: 100%;
-  background-color: #cc0000;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-}
-
 .section--news {
   background-color: #fff;
   border: 1px solid #ccc;
@@ -55,7 +34,6 @@
 .section--news .section__title::after {
   bottom: 0;
 }
-/* ------------------ 見出し ここまで------------------ */
 
 /* ------------------ ヒーローセクション ------------------ */
 .hero {
@@ -133,7 +111,6 @@
     font-size: 1rem;
   }
 }
-/* ------------------ ヒーローセクション ここまで ------------------ */
 
 /* ------------------ ニュース一覧 ------------------ */
 .news-list {
@@ -158,7 +135,6 @@
   margin-right: 0.5rem;
   white-space: nowrap;
 }
-/* ------------------ ニュース一覧 ここまで ------------------ */
 
 /* ------------------ コンセプト・マンツーマン指導・価格設定セクション ------------------ */
 .main section {
@@ -204,7 +180,6 @@
     height: auto;
   }
 }
-/* ------------------ コンセプト・マンツーマン指導・価格設定セクション ここまで ------------------ */
 
 /* ------------------ 店舗外観セクション ------------------ */
 .section2 {
@@ -359,4 +334,24 @@
   font-size: 0.9em;
   color: #888;
 }
+
+.access-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 2rem;
+  align-items: center;
+}
+
+.access-buttons img {
+  width: 220px;
+  max-width: 100%;
+  height: auto;
+  transition: opacity 0.3s ease;
+}
+
+.access-buttons img:hover {
+  opacity: 0.8;
+}
+
 /* ------------------ アクセス ここまで ------------------ */

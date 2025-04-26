@@ -1,3 +1,4 @@
+/* ------------------ カラー変数 ------------------ */
 :root {
   --main-color: #0055cc;
   --accent-color: #fdd835;
@@ -5,6 +6,7 @@
   --bg-blue: #e6f4ff;
 }
 
+/* ------------------ 基本リセット ------------------ */
 body {
   margin: 0;
   font-family: 'Helvetica Neue', sans-serif;
@@ -46,7 +48,6 @@ ul {
 .section--blue {
   background-color: var(--bg-blue);
 }
-/* ------------------ レイアウト ここまで ------------------ */
 
 /* ------------------ ボタン ------------------ */
 .button {
@@ -67,6 +68,39 @@ ul {
   color: #000;
 }
 
+.reserve-button {
+  background-color: var(--main-color);
+  color: white;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  white-space: nowrap;
+}
+
+.reserve-button:hover {
+  background-color: var(--accent-color);
+  color: #000;
+}
+
+@media screen and (max-width: 480px) {
+  .reserve-button {
+    font-size: 0.9rem;
+    padding: 0.6rem 1rem;
+    border-radius: 6px;
+  }
+}
+
+@media screen and (max-width: 1180px) {
+  .reserve-button {
+    font-size: 0.85rem;
+    padding: 0.5rem 0.8rem;
+    border-radius: 6px;
+    margin-right: 45px;
+  }
+}
+
 .u-align-right {
   display: flex;
   justify-content: flex-end;
@@ -78,7 +112,6 @@ ul {
     justify-content: center;
   }
 }
-/* ------------------ ボタン ここまで ------------------ */
 
 /* ------------------ ヘッダー ------------------ */
 .header {
@@ -119,29 +152,7 @@ ul {
   height: 80px;
 }
 
-.reserve-button {
-  background-color: var(--main-color);
-  color: white;
-  padding: 1rem 2rem;
-  font-size: 1.2rem;
-  border-radius: 10px;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-  white-space: nowrap;
-}
-
-.reserve-button:hover {
-  background-color: var(--accent-color);
-  color: #000;
-}
-
 @media screen and (max-width: 480px) {
-  .reserve-button {
-    font-size: 0.9rem;
-    padding: 0.6rem 1rem;
-    border-radius: 6px;
-  }
-
   .header-logo-img img {
     max-height: 60px;
     height: auto;
@@ -153,13 +164,6 @@ ul {
 }
 
 @media screen and (max-width: 1180px) {
-  .reserve-button {
-    font-size: 0.85rem;
-    padding: 0.5rem 0.8rem;
-    border-radius: 6px;
-    margin-right: 45px;
-  }
-
   .header-logo-img img {
     max-height: 50px;
   }
@@ -171,13 +175,13 @@ ul {
   }
 }
 
-/* ナビゲーション */
+/* ------------------ ナビゲーション ------------------ */
 .header-nav {
   display: flex;
   text-align: center;
   margin-top: 0.5rem;
   margin-bottom: 1.5rem;
-  overflow: hidden; /* ← 下線や影がはみ出ないようにする */
+  overflow: hidden;
 }
 
 .header-nav ul {
@@ -188,7 +192,7 @@ ul {
 }
 
 .header-nav li a {
-  position: relative; /* ← これが基準になる */
+  position: relative;
   display: inline-block;
   color: black;
   text-decoration: none;
@@ -217,12 +221,10 @@ ul {
   bottom: 5px;
   width: 100%;
   height: 4px;
-  background-color: #fdd835; /* 黄色い下線 */
+  background-color: #fdd835;
   border-radius: 2px;
-  z-index: 1; /* 他の装飾より上になるように */
+  z-index: 1; /
 }
-
-/* ------------------ ヘッダー ここまで ------------------ */
 
 /* ------------------ ハンバーガーメニュー ------------------ */
 .hamburger {
@@ -256,7 +258,7 @@ ul {
   }
 
   .header-nav {
-    display: none;
+    display: none !important;
   }
 
   .mobile-nav.show {
@@ -264,6 +266,7 @@ ul {
   }
 }
 
+/* ------------------ モバイルナビ ------------------ */
 .mobile-nav {
   display: none;
   position: absolute;
@@ -299,7 +302,62 @@ ul {
   display: block;
   font-weight: normal;
 }
-/* ------------------ ハンバーガーメニュー ここまで ------------------ */
+
+/* ------------------ ページ共通トップ画像 ------------------ */
+.page-hero {
+  position: relative;
+  width: 100vw;
+  height: 300px;
+  overflow: hidden;
+}
+
+.page-hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.page-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-hero-title {
+  color: white;
+  font-size: 2.6rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* ------------------ 見出し ------------------ */
+.section__heading {
+  color: #000;
+  font-weight: bold;
+  position: relative;
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+  text-align: left;
+  padding-bottom: 1rem;
+}
+
+.section__heading::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: #cc0000;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
 
 /* ------------------ フッター ------------------ */
 .footer {
@@ -308,26 +366,6 @@ ul {
   background-color: var(--accent-color);
   color: #333;
 }
-
-.access-buttons {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  margin-top: 2rem;
-  align-items: center;
-}
-
-.access-buttons img {
-  width: 220px;
-  max-width: 100%;
-  height: auto;
-  transition: opacity 0.3s ease;
-}
-
-.access-buttons img:hover {
-  opacity: 0.8;
-}
-/* ------------------ フッター ここまで ------------------ */
 
 /* ------------------ トップに戻るボタン ------------------ */
 .back-to-top {
@@ -350,7 +388,6 @@ ul {
   background-color: #0056b3;
   transform: scale(1.1);
 }
-/* ------------------ トップに戻るボタン ここまで ------------------ */
 
 /* ------------------ アニメーション ------------------ */
 @keyframes fadeUp {
@@ -370,4 +407,3 @@ ul {
     transform: translateY(0);
   }
 }
-/* ------------------ アニメーション ここまで ------------------ */

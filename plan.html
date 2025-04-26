@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>オダギリジム | コンセプト</title>
+    <link rel="stylesheet" href="CSS/reset.css" />
+    <link rel="stylesheet" href="CSS/common.css">
+    <link rel="stylesheet" href="CSS/plan.css">
+  </head>
+<body>
+
+  <!-- ヘッダー -->
+  <header class="header" id="header">
+    <div class="header-top">
+      <h1 class="site-title">
+        <a href="index.html" class="header-logo-img">
+          <img src="img/ロゴ1.jpg" width="600" height="250" alt="オダギリジム ロゴ" />
+        </a>
+      </h1>
+  
+      <!-- ナビゲーション -->
+      <nav class="header-nav">
+        <ul>
+          <li><a href="index.html">ホーム</a></li>
+          <li><a href="#">ニュース</a></li>
+          <li><a href="concept.html">コンセプト</a></li>
+          <li><a href="#">店舗詳細</a></li>
+          <li><a href="#">トレーナー紹介</a></li>
+          <li><a href="#">Q&A</a></li>
+          <li><a href="plan.html"  class="current">料金/プラン</a></li>
+          <li><a href="#">ご予約・お問い合わせ</a></li>
+        </ul>
+      </nav>
+  
+      <!-- 右側：体験予約ボタン -->
+      <a href="https://your-reservation-link.com" class="reserve-button">体験予約はこちら</a>
+
+      <!-- ハンバーガーアイコン -->
+      <button class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+      <!-- ハンバーガーメニューの中身 -->
+      <nav class="mobile-nav" id="mobile-nav">
+        <ul>
+          <li><a href="index.html" class="current">ホーム</a></li>
+          <li><a href="news.html">ニュース</a></li>
+          <li><a href="concept.html">コンセプト</a></li>
+          <li><a href="shop.html">店舗詳細</a></li>
+          <li><a href="trainer.html">トレーナー紹介</a></li>
+          <li><a href="qa.html">Q&A</a></li>
+          <li><a href="plan.html">料金/プラン</a></li>
+          <li><a href="contact.html">ご予約・お問い合わせ</a></li>
+        </ul>
+      </nav>
+      
+  </header>
+
+  <div id="trigger"></div>
+
+  <!-- トップ画像 -->
+  <section class="page-hero">
+    <img src="img/page-top.jpg" width="2400" height="600" alt="ページ共通トップ画像" class="page-hero-image" />
+    <div class="page-hero-overlay">
+      <h2 class="page-hero-title">料金/プラン</h2>
+    </div>
+  </section>
+
+  <!-- バナー画像 -->
+  <div class="plan-banner-container">
+    <a href="#">
+      <img src="img/plan-banner_trial-pt.jpg" alt="体験予約バナー" />
+    </a>
+  </div>
+
+
+  <!-- メイン -->
+  <main class="main plan-main">
+    <section class="plan-page section section--light">
+      <p class="lead">目標・ライフスタイルに合わせたプランを用意しています。</p>
+
+      <div class="plan-container">
+        <div class="plan">
+          <h3>初回体験</h3>
+          <p class="price">3,300円（税込）</p>
+          <p>カウンセリング・トレーニング体験込み</p>
+        </div>
+
+        <div class="plan">
+          <h3>月4回コース</h3>
+          <p class="price">26,400円（税込）</p>
+          <p>週1ペースで無理なく継続</p>
+        </div>
+
+        <div class="plan">
+          <h3>月8回コース</h3>
+          <p class="price">48,400円（税込）</p>
+          <p>週2ペースでしっかりボディメイク</p>
+        </div>
+
+        <div class="plan">
+          <h3>回数券（10回）</h3>
+          <p class="price">71,500円（税込）</p>
+          <p>好きなタイミングで通いたい方向け</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- フッター -->
+  <footer class="footer">
+    <p>&copy; 2021 パーソナルトレーニング オダギリジム</p>
+  </footer>
+
+  <a href="#" id="back-to-top">
+    <i class="fas fa-arrow-up"></i>
+  </a>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

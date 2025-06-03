@@ -1,16 +1,9 @@
+/* ------------------ バナー ------------------ */
 .plan-banner-container {
   width: 100%;
   max-width: 1000px;
   margin: 2rem auto;
   text-align: center;
-}
-
-.plan-banner-container img {
-  width: 100%;
-  max-width: 600px;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
 .plan-banner-container a {
@@ -24,69 +17,208 @@
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
-.plan-page .lead {
-  font-weight: bold;
-  font-size: 1.3rem;
-  text-align: center;
-  margin-bottom: 2rem;
-  color: #333;
-}
-
-.plan-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
-  margin-bottom: 2rem;
-}
-
-.plan {
-  flex: 1 1 250px;
-  max-width: 300px;
-  border: 2px solid var(--main-color);
-  border-radius: 10px;
-  padding: 1.5rem;
-  text-align: center;
-  background-color: #fff;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-}
-
-.plan h3 {
-  font-size: 1.4rem;
-  margin-bottom: 1rem;
-  color: var(--main-color);
-}
-
-.plan .price {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #e53935;
-  margin-bottom: 0.5rem;
-}
-
-@media screen and (max-width: 768px) {
-  .plan-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .plan {
-    width: 90%;
-  }
-}
-
-/* バナー画像フェードインアニメーション */
 .plan-banner-container img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
   opacity: 0;
   transform: translateY(30px);
   animation: fadeInBanner 1.5s ease-out forwards;
-  animation-delay: 0.5s; /* ちょっと遅れて出すと自然 */
+  animation-delay: 0.5s;
 }
 
-/* アニメーションの定義 */
+/* バナー画像フェードインアニメーション */
 @keyframes fadeInBanner {
   to {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* ------------------ メインレイアウト ------------------ */
+@media screen and (max-width: 480px) {
+  .section {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
+
+.plan-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto 4rem auto;
+  padding: 0 20px;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+  .plan-container {
+    padding: 0;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* ------------------ テーブル ------------------ */
+.table-scroll-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  width: 100%;
+  padding-bottom: 1rem;
+}
+
+.table-scroll-wrapper .price-table {
+  /* min-width: 400px; */
+  min-width: 100%;
+}
+
+@media screen and (max-width: 480px) {
+  .table-scroll-wrapper {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.price-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  font-size: 1.2rem;
+}
+
+@media screen and (max-width: 768px) {
+  .price-table {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .price-table {
+    font-size: 0.8rem;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.price-table th,
+.price-table td {
+  border: 1px solid #ccc;
+  padding: 1.5rem;
+}
+
+.price-table th {
+  width: 50%;
+  background-color: #eef5ff;
+  text-align: center;
+  font-weight: bold;
+}
+
+.price-table td {
+  width: 50%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.6rem;
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 768px) {
+  .price-table td {
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .price-table td {
+    font-size: 0.95rem;
+  }
+}
+
+.price-table td .note {
+  display: block;
+  font-size: 1rem;
+  color: #666;
+  margin-top: 0.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .price-table td .note {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .price-table td .note {
+    font-size: 0.8rem;
+  }
+}
+
+.whitening-note {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: #555;
+}
+
+@media screen and (max-width: 768px) {
+  .whitening-note {
+    text-align: center;
+    font-size: 0.9rem;
+  }
+}
+
+.rental-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.rental-item {
+  text-align: center;
+  max-width: 400px;
+}
+
+@media screen and (max-width: 768px) {
+  .rental-images {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .rental-item {
+    width: 90%;
+  }
+}
+
+.rental-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.rental-note {
+  font-size: 1rem;
+  color: #555;
+  text-align: left;
+  margin-top: 1.5rem;
+  line-height: 1.6;
+}
+
+@media screen and (max-width: 768px) {
+  .rental-note {
+    font-size: 0.95rem;
+  }
+}
+
+.rental-item p {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: #333;
 }

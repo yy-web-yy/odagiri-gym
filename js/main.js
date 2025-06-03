@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const trigger = document.querySelector('#trigger');
 
   if (header && trigger) {
+    // IntersectionObserverで切り替え
     const observer = new IntersectionObserver(
       ([entry]) => {
         header.classList.toggle('scrolled', !entry.isIntersecting);
@@ -17,11 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const backToTop = document.querySelector('.back-to-top');
   if (backToTop) {
     window.addEventListener('scroll', () => {
-      if (window.scrollY > 300) {
-        backToTop.classList.add('show');
-      } else {
-        backToTop.classList.remove('show');
-      }
+      backToTop.style.display = window.scrollY > 300 ? 'block' : 'none';
     });
 
     backToTop.addEventListener('click', (e) => {
@@ -33,35 +30,11 @@ document.addEventListener('DOMContentLoaded', () => {
   // ハンバーガーメニューの開閉
   const hamburger = document.querySelector('.hamburger');
   const mobileNav = document.querySelector('.mobile-nav');
+
   if (hamburger && mobileNav) {
     hamburger.addEventListener('click', () => {
       mobileNav.classList.toggle('show');
     });
   }
-
-  //全画面ハンバーガーメニュー
-  const fullscreenNav = document.getElementById('fullscreen-nav');
-  const closeNav = document.getElementById('close-nav');
-
-  if (hamburger && fullscreenNav && closeNav) {
-    hamburger.addEventListener('click', () => {
-      document.body.classList.add('nav-open');
-    });
-
-    closeNav.addEventListener('click', () => {
-      document.body.classList.remove('nav-open');
-    });
-  }
-
-  hamburger.addEventListener('click', () => {
-    document.body.classList.add('nav-open');
-    hamburger.style.display = 'none';
-    closeNav.style.display = 'flex';
-  });
-
-  closeNav.addEventListener('click', () => {
-    document.body.classList.remove('nav-open');
-    hamburger.style.display = 'flex';
-    closeNav.style.display = 'none';
-  });
 });
+

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <title>オダギリジム | コンセプト</title>
+    <title>オダギリジム | 料金/プラン</title>
     <link rel="stylesheet" href="CSS/reset.css" />
     <link rel="stylesheet" href="CSS/common.css">
     <link rel="stylesheet" href="CSS/plan.css">
@@ -20,7 +20,10 @@
           <img src="img/header-logo.png" width="600" height="250" alt="オダギリジム ロゴ" />
         </a>
       </h1>
-  
+
+      <!-- スマホ専用体験ボタン -->
+      <a href="#" class="reserve-button--mobile">体験予約はこちら</a>
+
       <!-- ナビゲーション -->
       <nav class="header-nav">
         <ul>
@@ -29,19 +32,19 @@
           <li><a href="shop.html">店舗詳細</a></li>
           <li><a href="trainer.html">トレーナー紹介</a></li>
           <li><a href="qa.html">Q&A</a></li>
-          <li><a href="plan.html"  class="current">料金/プラン</a></li>
+          <li><a href="plan.html" class="current">料金/プラン</a></li>
           <li><a href="contact.html">ご予約・お問い合わせ</a></li>
         </ul>
       </nav>
-  
-      <!-- 右側：体験予約ボタン -->
-      <a href="#" class="reserve-button">体験予約はこちら</a>
 
       <!-- ハンバーガーアイコン -->
       <button class="hamburger" id="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
+        <div class="hamburger-box">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span class="menu-label">MENU</span>
+        </div>
       </button>
     </div>
 
@@ -57,7 +60,7 @@
           <li><a href="contact.html">ご予約・お問い合わせ</a></li>
         </ul>
       </nav>
-      
+
   </header>
 
   <div id="trigger"></div>
@@ -80,32 +83,177 @@
 
   <!-- メイン -->
   <main class="main plan-main">
-    <section class="plan-page section section--light">
-      <p class="lead">目標・ライフスタイルに合わせたプランを用意しています。</p>
-
+    <!-- 体験・入会金 -->
+    <section class="plan-page section section--light plan-experience">
       <div class="plan-container">
-        <div class="plan">
-          <h3>初回体験</h3>
-          <p class="price">3,300円（税込）</p>
-          <p>カウンセリング・トレーニング体験込み</p>
+        <h2 class="section__heading section__heading--center">体験・入会金</h2>
+        <div class="table-scroll-wrapper">
+          <table class="price-table">
+            <tbody>
+              <tr>
+                <th>トレーニング体験<br>&lbrack;50分&rbrack;</th>
+                <td>3,300円</td>
+              </tr>
+              <tr>
+                <th>入会金</th>
+                <td>11,000円<br><span class="note">※体験当日入会で半額</span></td>
+              </tr>
+            </tbody>
+          </table>
         </div>
+      </div>
+    </section>
 
-        <div class="plan">
-          <h3>月4回コース</h3>
-          <p class="price">26,400円（税込）</p>
-          <p>週1ペースで無理なく継続</p>
+    <!-- 基本コース -->
+    <section class="plan-page section plan-basic">
+      <div class="plan-container">
+        <h2 class="section__heading section__heading--center">基本コース</h2>
+        <div class="table-scroll-wrapper">
+          <table class="price-table">
+            <tbody>
+              <tr>
+                <th>パーソナルトレーニング<br>&lbrack;50分&rbrack;</th>
+                <td>6,000円</td>
+              </tr>
+              <tr>
+                <th>グループパーソナル<br>&lbrack;80分 2名&rbrack;</th>
+                <td>10,800円</td>
+              </tr>
+            </tbody>
+        </table>
         </div>
+      </div>
+    </section>
 
-        <div class="plan">
-          <h3>月8回コース</h3>
-          <p class="price">48,400円（税込）</p>
-          <p>週2ペースでしっかりボディメイク</p>
+  <!-- サブスクリプションサービス -->
+    <section class="plan-page section section--light plan-subscription">
+      <div class="plan-container">
+        <h2 class="section__heading section__heading--center">サブスクリプションサービス</h2>
+        <div class="table-scroll-wrapper">
+          <table class="price-table">
+            <tbody>
+              <tr>
+                <th>50分 &times; 4回&#xff0f;月</th>
+                <td>20,400円<br><span class="note">※1回あたり5,100円</span></td>
+              </tr>
+              <tr>
+                <th>50分 &times; 8回&#xff0f;月</th>
+                <td>40,400円<br><span class="note">※1回あたり5,050円</span></td>
+              </tr>
+              <tr>
+                <th>50分 &times; 12回&#xff0f;月</th>
+                <td>59,400円<br><span class="note">※1回あたり4,950円</span></td>
+              </tr>
+            </tbody>
+          </table>
         </div>
+      </div>
+    </section>
 
-        <div class="plan">
-          <h3>回数券（10回）</h3>
-          <p class="price">71,500円（税込）</p>
-          <p>好きなタイミングで通いたい方向け</p>
+    <!-- 回数券 -->
+    <section class="plan-page section plan-ticket">
+      <div class="plan-container">
+        <h2 class="section__heading section__heading--center">回数券</h2>
+        <div class="table-scroll-wrapper">
+          <table class="price-table">
+            <tbody>
+              <tr>
+                <th>50分 &times; 8回</th>
+                <td>45,600円<br><span class="note">※1回あたり5,700円</span></td>
+              </tr>
+              <tr>
+                <th>50分 &times; 12回</th>
+                <td>66,960円<br><span class="note">※1回あたり5,580円</span></td>
+              </tr>
+              <tr>
+                <th>50分 &times; 16回</th>
+                <td>86,400円<br><span class="note">※1回あたり5,400円</span></td>
+              </tr>
+              <tr>
+                <th>50分 &times; 24回</th>
+                <td>122,400円<br><span class="note">※1回あたり5,100円</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+  <!-- セルフホワイトニング -->
+    <section class="plan-page section section--light plan-whitening">
+      <div class="plan-container">
+        <h2 class="section__heading section__heading--center">セルフホワイトニング</h2>
+        <div class="table-scroll-wrapper">
+          <table class="price-table">
+            <tbody>
+              <tr>
+                <th>初回価格（お試し価格）<br>8分 &times; 2セット</th>
+                <td>3,300円</td>
+              </tr>
+              <tr>
+                <th>通常価格（2回目以降）<br>8分 &times; 2セット</th>
+                <td>4,950円</td>
+              </tr>
+              <tr>
+                <th>回数券・3回</th>
+                <td>13,860円<br><span class="note">※1回あたり4,620円</span></td>
+              </tr>
+              <tr>
+                <th>回数券・5回</th>
+                <td>22,000円<br><span class="note">※1回あたり4,400円</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="btn-wrapper">
+          <a href="#" class="btn">ホワイトニング専用ホームページへ</a>
+          <p class="whitening-note">※当ジム会員は5%OFF（初回価格を除く）</p>
+        </div>
+      </div>
+    </section>
+
+  <!-- レンタル品 -->
+    <section class="plan-page section plan-rental">
+      <div class="plan-container">
+        <h2 class="section__heading section__heading--center">手ぶらで来店OK！レンタル品</h2>
+        <div class="table-scroll-wrapper">
+          <table class="price-table">
+            <tbody>
+              <tr>
+                <th>タオルセット</th>
+                <td>200円</td>
+              </tr>
+              <tr>
+                <th>Ｔシャツ</th>
+                <td>200円</td>
+              </tr>
+              <tr>
+                <th>パンツ</th>
+                <td>200円</td>
+              </tr>
+              <tr>
+                <th>シューズ</th>
+                <td>200円</td>
+              </tr>
+              <tr>
+                <th>4点セット</th>
+                <td>700円</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="rental-note">
+          ＴシャツのサイズはS・M・L・XL、パンツは共用サイズS〜XL・レディースサイズS〜XL、シューズは23cm〜29cmをご用意しております。
+        </p>
+        <div class="rental-images">
+          <div class="rental-item">
+            <img src="img/rental-set-wear-shoes.jpg" alt="Ｔシャツ、パンツ、シューズのレンタルセット" width="1776" height="1184">
+            <p>Ｔシャツ、パンツ、シューズ</p>
+          </div>
+          <div class="rental-item">
+            <img src="img/rental-set-towels.jpg" alt="バスタオルとフェイスタオルのセット" width="1775" height="1180">
+            <p>バスタオルとフェイスタオルのセット</p>
+          </div>
         </div>
       </div>
     </section>
@@ -115,10 +263,14 @@
   <footer class="footer">
     <p>&copy; 2021 パーソナルトレーニング オダギリジム</p>
   </footer>
+  
+  <!-- 体験予約ボタン -->
+  <a href="#" class="fixed-reserve-button">体験予約はこちら</a>
 
   <!-- トップに戻るボタン -->
-  <a href="#" class="back-to-top">
-    <i class="fas fa-arrow-up"></i>
+  <a href="#" class="back-to-top custom-back-to-top">
+    <div class="arrow-icon"><i class="fas fa-arrow-up"></i></div>
+    <div class="top-label">PAGE<br>TOP</div>
   </a>
   
   <script src="js/main.js" defer></script>

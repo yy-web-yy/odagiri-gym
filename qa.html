@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <title>オダギリジム | コンセプト</title>
+    <title>オダギリジム | Q&A</title>
     <link rel="stylesheet" href="CSS/reset.css" />
     <link rel="stylesheet" href="CSS/common.css">
     <link rel="stylesheet" href="CSS/qa.css">
@@ -20,7 +20,10 @@
           <img src="img/header-logo.png" width="600" height="250" alt="オダギリジム ロゴ" />
         </a>
       </h1>
-  
+
+      <!-- スマホ専用体験ボタン -->
+      <a href="#" class="reserve-button--mobile">体験予約はこちら</a>
+
       <!-- ナビゲーション -->
       <nav class="header-nav">
         <ul>
@@ -33,22 +36,22 @@
           <li><a href="contact.html">ご予約・お問い合わせ</a></li>
         </ul>
       </nav>
-  
-      <!-- 右側：体験予約ボタン -->
-      <a href="#" class="reserve-button">体験予約はこちら</a>
 
       <!-- ハンバーガーアイコン -->
       <button class="hamburger" id="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
+        <div class="hamburger-box">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span class="menu-label">MENU</span>
+        </div>
       </button>
     </div>
 
       <!-- ハンバーガーメニューの中身 -->
       <nav class="mobile-nav" id="mobile-nav">
         <ul>
-          <li><a href="index.html" class="current">ホーム</a></li>
+          <li><a href="index.html">ホーム</a></li>
           <li><a href="concept.html">コンセプト</a></li>
           <li><a href="shop.html">店舗詳細</a></li>
           <li><a href="trainer.html">トレーナー紹介</a></li>
@@ -81,10 +84,14 @@
   <footer class="footer">
     <p>&copy; 2021 パーソナルトレーニング オダギリジム</p>
   </footer>
+  
+  <!-- 体験予約ボタン -->
+  <a href="#" class="fixed-reserve-button">体験予約はこちら</a>
 
   <!-- トップに戻るボタン -->
-  <a href="#" class="back-to-top">
-    <i class="fas fa-arrow-up"></i>
+  <a href="#" class="back-to-top custom-back-to-top">
+    <div class="arrow-icon"><i class="fas fa-arrow-up"></i></div>
+    <div class="top-label">PAGE<br>TOP</div>
   </a>
 
   <script src="js/main.js" defer></script>
